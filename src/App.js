@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+import InstructionsForm from './InstructionsForm';
+import InstructionsList from './InstructionsList';
+import OrderImages from './OrderImages';
+import OrderNameInput from './OrderNameInput';
 
 function App() {
+  const [foodId, setFoodId] = useState(1);
+  const [sideId, setSideId] = useState(1);
+  const [drinkId, setDrinkId] = useState(1);
+  const [instructions, setInstructions] = useState([]);
+  const [orderName, setOrderName] = useState('');
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <OrderNameInput setOrderName={setOrderName} />
+
     </div>
   );
 }
