@@ -4,6 +4,10 @@ import InstructionsForm from './Instructions/InstructionsForm';
 import InstructionsList from './Instructions/InstructionsList';
 import OrderImages from './Order/OrderImages';
 import OrderNameInput from './Order/OrderNameInput';
+import DrinkDropdown from './Dropdowns/DrinkDropdown';
+import SideDropdown from './Dropdowns/SideDropdown';
+import FoodDropdown from './Dropdowns/FoodDropdown';
+
 
 function App() {
   const [foodId, setFoodId] = useState(1);
@@ -14,10 +18,17 @@ function App() {
 
   return (
     <div className="App">
+      <div>
+        <p>Order for {orderName}</p>
+      </div>
       <OrderNameInput setOrderName={setOrderName} />
       <OrderImages foodId={foodId} sideId={sideId} drinkId={drinkId} />
       <InstructionsForm setInstructions={setInstructions} instructions={instructions} />
       <InstructionsList instructions={instructions} />
+
+      <FoodDropdown setFoodId={setFoodId} />
+      <SideDropdown setSideId={setSideId} />
+      <DrinkDropdown setDrinkId={setDrinkId} />
 
     </div>
   );
