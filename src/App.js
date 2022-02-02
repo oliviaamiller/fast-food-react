@@ -22,7 +22,10 @@ function App() {
         <p>Order for {orderName}</p>
       </div>
       <OrderNameInput setOrderName={setOrderName} />
-      <OrderImages foodId={foodId} sideId={sideId} drinkId={drinkId} />
+      <div className='food-images' >
+        <OrderImages foodId={foodId} sideId={sideId} drinkId={drinkId} />
+      </div>
+      
       <InstructionsForm setInstructions={setInstructions} instructions={instructions} />
       <InstructionsList instructions={instructions} />
 
