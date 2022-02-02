@@ -18,22 +18,24 @@ function App() {
 
   return (
     <div className="App">
-      <div>
-        <p>Order for {orderName}</p>
-      </div>
-      
+      <h2>Super Fast Food</h2>
       <div className='food-images' >
         <OrderImages foodId={foodId} sideId={sideId} drinkId={drinkId} />
       </div>
+  
+      <div className='dropdowns'>
+        <FoodDropdown setFoodId={setFoodId} />
+        <SideDropdown setSideId={setSideId} />
+        <DrinkDropdown setDrinkId={setDrinkId} />
+      </div>
+
+      <div className='Order'>
+        <p>Order for {orderName}</p>
       
-      <InstructionsForm setInstructions={setInstructions} instructions={instructions} />
-      <InstructionsList instructions={instructions} />
-
-      <FoodDropdown setFoodId={setFoodId} />
-      <SideDropdown setSideId={setSideId} />
-      <DrinkDropdown setDrinkId={setDrinkId} />
-
-      <OrderNameInput setOrderName={setOrderName} />
+        <InstructionsForm setInstructions={setInstructions} instructions={instructions} />
+        <InstructionsList instructions={instructions} />
+        <OrderNameInput setOrderName={setOrderName} />
+      </div>
 
     </div>
   );

@@ -1,7 +1,36 @@
+html, body, #root, .App {
+  height: 100%;
+}
+
 .App {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .food-images img {
   height: 10rem;
+}
+
+.App h2 {
+  font-family: 'Monoton', sans-serif;
+  font-weight: 400;
+  font-size: 4rem;
+  text-transform: uppercase;
+  color: rgb(205,0,26);
+}
+
+.App p {
+  color: rgb(205,0,26);
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.Order {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: rgb(205,0,26) 1px solid;
+  width: 20rem;
 }
