@@ -1,9 +1,9 @@
 import './App.css';
 import { useState } from 'react';
-import InstructionsForm from './InstructionsForm';
-import InstructionsList from './InstructionsList';
-import OrderImages from './OrderImages';
-import OrderNameInput from './OrderNameInput';
+import InstructionsForm from './Instructions/InstructionsForm';
+import InstructionsList from './Instructions/InstructionsList';
+import OrderImages from './Order/OrderImages';
+import OrderNameInput from './Order/OrderNameInput';
 
 function App() {
   const [foodId, setFoodId] = useState(1);
@@ -15,6 +15,9 @@ function App() {
   return (
     <div className="App">
       <OrderNameInput setOrderName={setOrderName} />
+      <OrderImages foodId={foodId} sideId={sideId} drinkId={drinkId} />
+      <InstructionsForm setInstructions={setInstructions} instructions={instructions} />
+      <InstructionsList instructions={instructions} />
 
     </div>
   );
