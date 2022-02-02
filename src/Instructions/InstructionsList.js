@@ -1,5 +1,6 @@
-import React from 'react';
+import Instruction from './Instruction';
 
-export default function InstructionsList() {
+
+export default function InstructionsList({ instructions }) {
   return <div></div>;
 }
