@@ -21,7 +21,7 @@ function App() {
       <div>
         <p>Order for {orderName}</p>
       </div>
-      <OrderNameInput setOrderName={setOrderName} />
+      
       <div className='food-images' >
         <OrderImages foodId={foodId} sideId={sideId} drinkId={drinkId} />
       </div>
@@ -32,6 +32,8 @@ function App() {
       <FoodDropdown setFoodId={setFoodId} />
       <SideDropdown setSideId={setSideId} />
       <DrinkDropdown setDrinkId={setDrinkId} />
+
+      <OrderNameInput setOrderName={setOrderName} />
 
     </div>
   );
